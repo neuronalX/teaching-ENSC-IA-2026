@@ -1,0 +1,38 @@
+
+# Local files
+03-Reservoir-Computing/Introduction-courte-en-francais-avec-exercices__local-run.ipynb
+
+#############################
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python tooling / caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE / editor
+.vscode/
+.idea/
+
+# OS hidden files
+.DS_Store
+Thumbs.db
+
+# Environment / secrets
+.env
+.env.*
