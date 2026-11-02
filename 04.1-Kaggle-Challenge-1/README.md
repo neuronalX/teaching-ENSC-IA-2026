@@ -21,6 +21,10 @@ Les données ne sont pas dans ce dépôt : elles sont sur la page Kaggle de la c
 ---
 
 > **Conseil important : dans la première demi-heure, faites les étapes 1 à 6 et déposez tout de suite le notebook et le CSV SARIMA sur le formulaire (étape 9).** Vous avez ainsi une soumission valide qui vous assure la note minimale de SARIMA, même si votre modèle n'est pas prêt à l'échéance. Vous pourrez redéposer une meilleure version ensuite.
+>
+> **Deux règles pour le dépôt sur le formulaire (étape 9) :**
+> 1. **Le notebook déposé est celui téléchargé depuis Kaggle** (dans votre notebook Kaggle : **File > Download Notebook**), avec votre code et ses sorties. Pas le `notebook_demarrage.ipynb` de ce dépôt GitHub.
+> 2. **Les deux fichiers portent exactement votre nom d'équipe Kaggle** : `nom_equipe.csv` et `nom_equipe.ipynb` (par exemple `carabines.csv`, `carabines.ipynb`), sans numéro ni autre mot.
 
 ## Pas à pas (à faire par les deux membres du binôme, sauf mention contraire)
 
@@ -66,14 +70,17 @@ Chacun des deux a maintenant sa propre équipe d'une personne. Il faut les réun
 2. Décommentez les deux lignes de validation sous la fonction et regardez la **RMSE de validation** : c'est elle qui vous dit si vous progressez. Elle calcule la même métrique que Kaggle.
 3. Quand vous faites mieux que SARIMA en validation, remplacez `PREDICT = predict_sarima` par `PREDICT = predict_mon_modele` dans la dernière cellule, puis soumettez comme à l'étape 6.
 4. Ne soumettez sur Kaggle que vos meilleurs essais (15 soumissions par jour au maximum).
+5. Pour régler les hyperparamètres de votre modèle (reservoir computing, mais la démarche vaut aussi pour GRU, LSTM ou SARIMA), inspirez-vous de la fin du [tutoriel 4 de reservoirpy](https://github.com/reservoirpy/reservoirpy/blob/master/tutorials/4-Understand_and_optimize_hyperparameters.ipynb) : recherche aléatoire des hyperparamètres et graphiques pour voir lesquels comptent. Évaluez chaque essai avec la RMSE de validation du notebook.
 
 ### 8. Choisir la soumission finale
 Onglet **Submissions** : cochez **Use for Final Score** sur vos 2 meilleures soumissions au maximum. Sinon, Kaggle choisit automatiquement celles qui ont le meilleur score public.
 
 ### 9. Déposer sur le formulaire (avant l'échéance, un membre du binôme)
-1. Téléchargez le notebook de la version ayant produit le CSV final (fichier `.ipynb`, menu **File**, puis **Download Notebook**) et nommez-le avec votre nom d'équipe, par exemple `equipe_bleue.ipynb`.
-2. Téléchargez le CSV de votre soumission finale (onglet **Output** de la version soumise) et **renommez-le avec votre nom d'équipe Kaggle**, par exemple `equipe_bleue.csv`.
-3. Un membre du binôme ouvre le formulaire (lien reçu par e-mail) et dépose les deux fichiers avant **18 h 30, heure de Paris, le 2 novembre 2026** pour la manche 1. Vérifiez le nom d'équipe, les fichiers et le message de confirmation. En cas d'amélioration, mettez votre dépôt à jour avant cette échéance.
+1. **Notebook : téléchargez-le depuis Kaggle**, pas depuis GitHub. Dans votre notebook Kaggle, ouvrez la version qui a produit votre CSV final, puis menu **File** > **Download Notebook**. Le fichier doit contenir votre modèle et ses sorties : un notebook identique au notebook de démarrage ne montre pas votre travail.
+2. **CSV** : téléchargez le CSV de votre soumission finale (onglet **Output** de la version soumise).
+3. **Renommez les deux fichiers exactement avec votre nom d'équipe Kaggle**, tel qu'il apparaît dans le classement : `carabines.csv` et `carabines.ipynb` si votre équipe s'appelle « carabines ». Pas de numéro, pas de « manche-1 », pas de nom d'étudiant.
+   *Pourquoi : la correction relie automatiquement chaque dépôt à votre score Kaggle grâce à ce nom, et vérifie que le CSV déposé est bien celui qui a été noté.*
+4. Un membre du binôme ouvre le formulaire (lien reçu par e-mail) et dépose les deux fichiers avant **18 h 30, heure de Paris, le 2 novembre 2026** pour la manche 1. Vérifiez le nom d'équipe, les fichiers et le message de confirmation. En cas d'amélioration, mettez votre dépôt à jour avant cette échéance.
 
 ---
 
